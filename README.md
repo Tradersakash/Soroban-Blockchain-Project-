@@ -32,27 +32,7 @@ This contract provides methods for initializing the contract, buying and selling
 
 To use this contract, you can deploy it to your smart contract platform and interact with it using the provided methods.
 
-### Example
-
-```rust
-// Example usage of the FractionalNFTContract
-let contract = FractionalNFTContract::new();
-let nft = NFT {
-    id: Symbol::from_str("nft_id"),
-    name: String::from("My NFT"),
-    description: String::from("Description of my NFT"),
-};
-let total_fractions = 10;
-contract.initialize(env, nft, total_fractions);
-
-// Buy fractions of the NFT
-let buyer = Address::from_str("buyer_address");
-let amount = 3;
-contract.buy_fraction(env, buyer, amount);
-
-// Sell fractions of the NFT
-let seller = Address::from_str("seller_address");
-let amount_to_sell = 2;
+\
 contract.sell_fraction(env, seller, amount_to_sell);
 
 // Get details of the NFT
